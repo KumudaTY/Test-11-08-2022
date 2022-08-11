@@ -41,7 +41,7 @@ def login(token):
                 else:
                     print("End Result : " + "Test Passed")
                 sc = 1
-            elif (fr1 == "Terminated" or fr1 == 'Warning'):
+            elif (fr1 == "Terminated" or fr1 == 'warning'):
                 print("End Result : " + fr1)
                 sc = 1
         time.sleep(10)
