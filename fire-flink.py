@@ -31,7 +31,7 @@ def login(token):
         c1 = json.loads(r1.content)
         fr1 = c1['responseObject']['executionStatus']
         print('status : ' + fr1 + '......')
-        if (fr1 == "Completed" or fr1 == "Terminated" or fr1 == "Warning"):
+        if (fr1 == "Completed" or fr1 == "Terminated" or fr1 == "WARNING"):
             if fr1 == 'Completed':
                 r2 = s.get(baseUrl+':8110/optimize/v1/executionResponse/result/' + exid, headers=head)
                 c2 = json.loads(r2.content)
@@ -41,7 +41,7 @@ def login(token):
                 else:
                     print("End Result : " + "Test Passed")
                 sc = 1
-            elif (fr1 == "Terminated" or fr1 == 'warning'):
+            elif (fr1 == "Terminated" or fr1 == 'WARNING'):
                 print("End Result : " + fr1)
                 sc = 1
         time.sleep(10)
