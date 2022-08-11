@@ -39,7 +39,7 @@ def login(token):
                 if fr2 == 'FAIL':
                     raise Test_Failed
                 elif fr2 == 'WARNING':
-                    print('WARNING')
+                    print('End Result : ' +'Warning')
                 else:
                     print("End Result : " + "Test Passed")
                 sc = 1
